@@ -20,7 +20,7 @@ export default function Clientes() {
     }, [])
     const mostrar = () => {
        
-        axios.get("https://webpublic-production-c9ef.up.railway.app/cliente/Consulta")
+        axios.get("https://imaginative-communication-production.up.railway.app/cliente/Consulta")
         .then(res => setData(res.data))
         .catch(err => console.log(err))
 
@@ -41,7 +41,7 @@ export default function Clientes() {
         }
         console.log(body)
         if(curp.length > 15 ){
-            axios.post("https://webpublic-production-c9ef.up.railway.app/cliente/registrar", body)
+            axios.post("https://imaginative-communication-production.up.railway.app/cliente/registrar", body)
             .catch((err) => { err })
     
 
@@ -59,7 +59,7 @@ export default function Clientes() {
     const borrar = (id) => {
         console.log("presionado y id : ", id)
         
-            axios.delete(`https://webpublic-production-c9ef.up.railway.app/cliente/${id}`)
+            axios.delete(`https://imaginative-communication-production.up.railway.app/cliente/${id}`)
             .then(() => mostrar())
             .catch((err) => console.log(err))
 
@@ -74,7 +74,7 @@ export default function Clientes() {
             curp: curp,
             fecha: fecha
         }
-        axios.put(`https://webpublic-production-c9ef.up.railway.app/cliente/actualizar/${idd}`, body)
+        axios.put(`https://imaginative-communication-production.up.railway.app/cliente/actualizar/${idd}`, body)
             .then(()=> mostrar())
             .catch((err) => console.log(err))
 
